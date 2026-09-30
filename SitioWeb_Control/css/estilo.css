@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: dimgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#control{
+    max-width: 250px;
+    height: 500px;
+    padding: 20px;
+    background-color: #26252A;
+    border-radius: 25px;
+    color: white;
+    filter: drop-shadow(15px 15px 10px rgba(0, 0, 0, 0.3));
+    z-index: 0;
+    overflow: hidden;
+}
+
+header{
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 50px;
+}
+
+#contenedor_boton_apagado{
+    width: 100%;
+    /*background-color: blue;*/
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#contenedor_boton_apagado img{
+    width: 50px;
+    filter: drop-shadow(5px 5px 2px rgba(0, 0, 0, 0.7));
+}
+
+#contenedor_boton_apagado img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.contenedor_botones{
+    float: left;
+    width: 100%;
+    background-color: #201F23;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.contenedor_botones button{
+    width: calc(100% / 3 - 20px);
+    height: 40px;
+    float: left;
+    margin: 10px;
+    border-radius: 10px;
+    margin-top: 0;
+    background-color: #18171C;
+    color: white;
+    filter: drop-shadow(5px 5px 2px rgba(0, 0, 0, 0.7));
+}
+
+.contenedor_botones button:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#contenedor_numero_diapositiva{
+    width: calc(100% / 3);
+    float: left;
+    /*background-color: chartreuse;*/
+    text-align: center;
+}
+
+#contenedor_numero_diapositiva div{
+    padding-bottom: 10px;
+}
+
+#contenedor_numero_diapositiva input{
+    width: calc(100% - 5px);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 16px;
+}
+
+#contenedor_numero_diapositiva button{
+    margin-top: 10px;
+    width: calc(100% - 20px);
+    background-color: #FCFBFF;
+    color: black;
+}
+
+.ultimos_botones button{
+    width: calc(50% - 20px);
+}
+
+.ultimos_botones button:last-child{
+    float: right;
+}
+
+.ultimos_botones button:last-child{
+    float: right;
+}
+
+#control_luz_endendido{
+    position: absolute;
+    top: -10px;
+    right: 50px;
+    width: 20px;
+    height: 20px;
+    float: left;
+    background-color: green;
+    border-radius: 10px;
+    z-index: 50;
+}

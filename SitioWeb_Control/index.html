@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/estilo.css">
+        <title>Control Presentación</title>
+    </head>
+    <body>
+        <div id="control">
+            <div id="control_luz_endendido"></div>
+            <header>Mi Control Presentación</header>
+            <div id="contenedor_boton_apagado">
+                <img src="img/icono_apagado.png" />
+            </div>
+            <div class="contenedor_botones">
+                <button>Anterior</button>
+                <div id="contenedor_numero_diapositiva">
+                    <div>Ir a<br>diapositiva:</div>
+                    <input type="text" />
+                    <button>Aceptar</button>
+                </div>
+                <button onclick="SiguienteDiapositiva()">Siguiente</button>
+            </div>
+            <div class="contenedor_botones ultimos_botones">
+                <button>Primer diapositiva</button>
+                <button>Última diapositiva</button>
+            </div>
+        </div>
+    </body>
+    <script src="js/control.js"></script>
+</html>
