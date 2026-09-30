@@ -11,20 +11,20 @@
             <div id="control_luz_endendido"></div>
             <header>Mi Control Presentación</header>
             <div id="contenedor_boton_apagado">
-                <img src="img/icono_apagado.png" />
+                <img onclick="SwitchPantalla()" src="img/icono_apagado.png" />
             </div>
             <div class="contenedor_botones">
-                <button>Anterior</button>
+                <button onclick="AnteriorDiapositiva()">Anterior</button>
                 <div id="contenedor_numero_diapositiva">
                     <div>Ir a<br>diapositiva:</div>
                     <input type="text" />
-                    <button>Aceptar</button>
+                    <button onclick="IrADiapositiva()">Aceptar</button>
                 </div>
                 <button onclick="SiguienteDiapositiva()">Siguiente</button>
             </div>
             <div class="contenedor_botones ultimos_botones">
-                <button>Primer diapositiva</button>
-                <button>Última diapositiva</button>
+                <button onclick="PrimerDiapositiva()">Primer diapositiva</button>
+                <button onclick="UltimaDiapositiva()">Última diapositiva</button>
             </div>
         </div>
     </body>
