@@ -3,6 +3,7 @@ const puerto = 3000;
 
 var numero_dispositiva = 1;
 var ultima_diapositiva = 12;
+var encendido = true;
 
 const server = http.createServer((request, response) => {
 
@@ -19,6 +20,15 @@ const server = http.createServer((request, response) => {
                     response.statusCode = 200;
                     response.setHeader("Content-Type", "application/json");
                     response.end(JSON.stringify(objeto_respuesta));
+                break;
+
+                case "/ConsultarEncendido":
+                    const objeto_respuesta2 = {
+                        "prendido": encendido
+                    }
+                    response.statusCode = 200;
+                    response.setHeader("Content-Type", "application/json");
+                    response.end(JSON.stringify(objeto_respuesta2));
                 break;
             }
         break;
@@ -76,7 +86,15 @@ const server = http.createServer((request, response) => {
 
                 case "/SwitchPresentacion":
                     request.on("data", info => {
-
+                        const objeto_encendido = JSON.parse(info);
+                        encendido = objeto_encendido.encendido;
+                        
+                        const objeto_respuesta = {
+                            prendido: encendido
+                        }
+                        response.statusCode = 200;
+                        response.setHeader("Content-Type", "application/json");
+                        response.end(JSON.stringify(objeto_respuesta));
                     });
                 break;
             }

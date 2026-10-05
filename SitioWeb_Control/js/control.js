@@ -70,14 +70,26 @@ function IrADiapositiva(){
     });
 }
 
+const control_luz_encendido = document.querySelector("#control_luz_endendido");
+
 function SwitchPantalla(){
 
-    const objeto_prendido = {
-        encendido: false
+    const objeto_prendido = {}
+    if(encendido){
+        objeto_prendido.encendido = false
+    }else{
+        objeto_prendido.endendido = true
     }
 
     fetch("http://localhost:3000/SwitchPresentacion", {
         method: "PUT",
         body: JSON.stringify(objeto_prendido)
+    }).then(recurso => recurso.json()).then(respuesta => {
+        if(respuesta.prendido){
+            control_luz_encendido.style.backgroundColor = "Green";
+        }else{
+            control_luz_encendido.style.backgroundColor = "Red";
+        }
+        encendido = respuesta.prendido;
     });
 }

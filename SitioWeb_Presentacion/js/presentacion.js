@@ -8,7 +8,18 @@ setInterval(() => {
     fetch("http://localhost:3000/ConsultarDiapositiva").then(recurso => recurso.json()).then( respuesta => {
         imagen.src = "img/presentacion/Diapositiva"+ respuesta.numero +".png";
     });
+
+    fetch("http://localhost:3000/ConsultarEncendido").then(recurso => recurso.json()).then( respuesta => {
+        if(respuesta.prendido){
+            imagen.style.display = "block";
+        }
+        else{
+               imagen.style.display = "none";
+        }
+    });
 },500);
+
+
 // setTImeout()
 /*repetir();
 function repetir(){
